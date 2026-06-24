@@ -1,0 +1,81 @@
+<html>
+<link rel = "stylesheet" href = "style.css" type = "text/css"></link>
+<div id = "workspace">
+	<div id = "canvas">
+		<div id = "mainCanvas">
+			<div id = "position">test</div>
+			<canvas id = "canvas1"></canvas>
+			<canvas id = "axis_canvas"></canvas>
+		</div>
+	</div>
+	<div id = "settings">
+		<div id = "color-setting">
+			<div id = "slider">
+				<div id = "resolution-container">
+					<label for = "resolution">resolution</label><br><input type = "range" id = "resolution" min = "0.01" max = "1" step = "0.01" value = "1"/>
+				</div>
+				<div id = "color-pallet-container">
+					<input type = "color" id = "pallet" value = "#FFFFFF"></input>
+				</div>
+			</div>
+		</div>
+		<div id = "pen_mode_container">
+			<label for = "pen_mode">Pen Mode</label>
+			<select id = "pen_mode">
+				<option value = "pen">Pen</option>
+				<option value = "brush">Brush</option>
+				<option value = "brush_face">Brush(face)</option>
+				<option value = "dropper">Eye Dropper</option>
+				<option value = "eraser">Eraser</option>
+				<option value = "eraser(beam)">Eraser(beam)</option>
+				<option value = "temp">Temporary Block</option>
+				<option value = "fill">Fill</option>
+			</select>	
+		</div>
+		<label for = "show_edge">Edge</label>
+		<select id = "show_edge">
+			<option value = "Show">Show</option>
+			<option value = "Hide">Hide</option>
+		</select>
+		<label for = "zoom">Zoom</label><input type = "range" id = "zoom" min = "0" max = "1" step = "0.01" value="1"/>
+		<div id = "load-save">
+			<br>
+			<button type = "button" id = "load">LOAD DATA/ADD LAYER</button>
+			<br><br>
+			<button type = "button" id = "save">SAVE</button>
+			<br><br>
+			<button type = "button" id = "saveLayer">SAVE EDITING LAYER</button>
+			<br><br>
+			<button type = "button" id = "removeLayer">REMOVE EDITING LAYER</button>
+		</div>
+		<div id = "layer-controller">
+		</div>
+		<div id = "LookAtController">
+			<br>
+			<button type = "button" id = "LAOrigin">Look at (0,0,0)</button>
+			<br><br>
+			<button type = "button" id = "LAA">Look at point</button>
+		</div>
+		<div id = "preview-box" width = "400" height = "1600">
+		</div>
+	</div>
+	<div id = "export-box">
+		<label for = "export" id = "description_export">exporting image</label>
+		<button type = "button" id = "shadow">Toggle Shadow</button>
+		<div id = "exportConfig"></div>
+		<button type = "button" id = "do_export">EXPORT SPRITE DATA</button><br><div id = "export-canvas"><canvas id = "export"></canvas></div>
+	</div>
+</div>
+<script type = "importmap">
+	{
+		"imports":{
+			"three": "https://cdn.jsdelivr.net/npm/three@0.182.0/build/three.webgpu.js",
+			"three/webgpu": "https://cdn.jsdelivr.net/npm/three@0.182.0/build/three.webgpu.js",
+			"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.182.0/examples/jsm/",
+			"ThreeDHandle":"./3DHandle.js",
+			"key_stats":"./key_stats.js"
+		}
+	}
+</script>
+<script src = "main.js" type = "module"></script>
+</html>

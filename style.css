@@ -1,0 +1,67 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+#workspace{
+	display:flex;
+	flex-direction:row;
+}
+#settings{
+	display:flex;
+	flex-direction:column;
+}
+
+#canvas{
+	display:flex;
+	flex-direction:column;
+}
+#sideview{
+	display:flex;
+	flex-direction:row;
+}
+
+#mainCanvas{
+	position:relative;
+	width:70vw;
+	height:100vh;
+}
+#axis_canvas{
+	position:absolute;
+	top:60px;
+	left:30px;
+}
+#position{
+	position:absolute;
+	top:0px;
+	left:5px;
+}
+#color-setting{
+	display:flex;
+	flex-direction:row;
+}
+#slider{
+	display:flex;
+	flex-direction:column;
+}
+#loadsave{
+	display:flex;
+	flex-direction:row;
+}
+#pen_mode_container{
+	display:flex;
+	flex-direction:column;
+}
+#preview-box{
+	user-select:none;
+	z-index:1;
+	visibility:hidden;
+}
+#export-canvas{
+	width:400px;
+	height:400px;
+	overflow:auto;
+}
+
+#export{
+	background-color:rgba(0,0,0,1);
+}
