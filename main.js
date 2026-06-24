@@ -50,8 +50,8 @@ class preview{
 				let y = Math.floor(this.dot*this.get2dPos(box.pos).y) - this.minY;
 			if(box.color != "transparent"){
 				let dotMap = [
-					[undefined,0,0,undefined],
-					[1,0,0,2],
+					[0,0,0,0],
+					[0,0,0,0],
 					[1,1,2,2],
 					[1,1,2,2]
 				];
