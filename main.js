@@ -159,7 +159,7 @@ class preview{
 }
 
 class Previews{
-	constructor(element, margeID, dot = 8){
+	constructor(element, margeID, dot = 4){
 		this.element = document.getElementById(element);
 		this.marge = document.getElementById(margeID);
 		this.ctx = this.marge.getContext("2d");
@@ -207,10 +207,10 @@ class Previews{
 			let height = 0;
 			for(const view in this.canvas[dir]){
 				if(this.canvas[dir][view].width > max_width) max_width = this.canvas[dir][view].width;
-				height += this.canvas[dir][view].height;
+				height += this.canvas[dir][view].height + 1;
 				exporting[name + "_" + dir + "_" + view] = {}
 			}
-			width += max_width;
+			width += max_width + 1;
 			if(height > max_height) max_height = height;
 		}
 		this.marge.width = width;
@@ -230,9 +230,9 @@ class Previews{
 					ih:this.canvas[dir][view].height
 				}
 				if(this.canvas[dir][view].width > max_width) max_width = this.canvas[dir][view].width;
-				OriginY += this.canvas[dir][view].height;
+				OriginY += this.canvas[dir][view].height + 1;
 			}
-			OriginX += max_width;
+			OriginX += max_width + 1;
 		}
 		if(boolean){
 			return exporting;
